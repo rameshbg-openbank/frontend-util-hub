@@ -6,8 +6,14 @@ const express = require("express");
 const RED = require("node-red");
 const path = require("path");
 
+const fileRoutes = require("./routes/pdf");
+
 // Create an Express app
 var app = express();
+
+app.use(express.json());
+
+app.use("/file", fileRoutes);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
