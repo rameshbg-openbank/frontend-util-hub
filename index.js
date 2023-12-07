@@ -20,7 +20,9 @@ app.set("view engine", "pug");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (_, res) {
-  res.render("index");
+  res.render("index", {
+    flowsPath: process.env.FLOWS_PATH,
+  });
 });
 
 // Create a server

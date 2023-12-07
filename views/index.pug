@@ -1,13 +1,24 @@
 doctype html
-html(lang="en")
+html(lang="en").h-full
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
     title Frontend UTIL HUB
     link(href="https://open-frontend-bucket.s3.amazonaws.com/logos/open-blob-purple.svg", rel="icon" , type="image/svg" )
-    link(href="index.css", rel="stylesheet")
-  body
-    h1.text-sm Hi
+    link(href="./styles/style.css", rel="stylesheet")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap")
+    style.
+      html {
+       font-family: 'Outfit', sans-serif;
+      }
+  body.h-full.text-white
+    div.bg-gradient-to-r.from-purple-500.to-pink-500.w-full.h-full.p-6
+      div.text-5xl.py-4.font-semibold.animate-bounce Frontend UTIL Hub app
+        span.animate-waving-hand    &nbsp;&nbsp;👋🏻
+      div
+        span
+          a(href=flowsPath target="_blank").underline.cursor-pointer.text-lg Click here
+          span  to navigate to Node-Red flows.
 
 
