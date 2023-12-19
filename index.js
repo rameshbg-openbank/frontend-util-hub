@@ -5,13 +5,18 @@ const http = require("http");
 const express = require("express");
 const RED = require("node-red");
 const path = require("path");
+const cors = require("cors");
 
 const fileRoutes = require("./routes/pdf");
 
 // Create an Express app
 var app = express();
 
+app.use(cors());
+
 app.use(express.json());
+
+app.options("*", cors());
 
 app.use("/file", fileRoutes);
 
