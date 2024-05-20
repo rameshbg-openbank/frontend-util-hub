@@ -60,7 +60,7 @@ app.use(redFlowsSettings.httpAdminRoot, RED.httpAdmin);
 // Serve the http nodes UI from /api
 app.use(redFlowsSettings.httpNodeRoot, RED.httpNode);
 
-server.listen(process.env.PORT || 5555);
+server.listen(process.env.PORT || 4444);
 
 // Start the runtime
 RED.start();
